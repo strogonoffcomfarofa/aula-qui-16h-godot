@@ -36,7 +36,7 @@ initial_velocity = 50.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 1.5
-scale_random = 0.5
+scale_random = 0.8
 scale_curve = SubResource( 15 )
 color_ramp = SubResource( 13 )
 color_initial_ramp = SubResource( 11 )
@@ -296,13 +296,16 @@ __meta__ = {
 position = Vector2( -7, 13 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+emitting = false
 amount = 10
-randomness = 0.5
+lifetime = 0.5
+one_shot = true
+randomness = 0.7
 process_material = SubResource( 9 )
 texture = ExtResource( 7 )
 
 [node name="Shadow" type="Sprite" parent="."]
-position = Vector2( 1, 14 )
+position = Vector2( 1, 13 )
 scale = Vector2( 1.1875, 0.5 )
 texture = ExtResource( 8 )
 
