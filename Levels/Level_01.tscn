@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Parallax/1 - Foreground_scenery.png" type="Texture" id=2]
@@ -19,6 +19,9 @@
 [ext_resource path="res://Prefabs/checkpoint.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Textures-16.png" type="Texture" id=18]
 [ext_resource path="res://Prefabs/Goal.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Transition_in.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/break-box.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scene/Birdie.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1806,6 +1809,7 @@ position = Vector2( 1317, 143 )
 
 [node name="goal" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2185, 32 )
+path = "res://Levels/Level_02.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 38, 84 )
@@ -1813,7 +1817,7 @@ position = Vector2( 38, 84 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Mushroom" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 290, 35 )
+position = Vector2( 251, 130 )
 collision_mask = 9
 
 [node name="Mushroom2" parent="Enemies" instance=ExtResource( 11 )]
@@ -1883,7 +1887,21 @@ position = Vector2( 1396, 178 )
 position = Vector2( 371, 115 )
 horizontal = false
 
+[node name="Transition_in" parent="." instance=ExtResource( 20 )]
+
 [node name="HUD" parent="." instance=ExtResource( 16 )]
+
+[node name="break-box" parent="." instance=ExtResource( 21 )]
+position = Vector2( 171, 81 )
+
+[node name="break-box" parent="break-box" instance=ExtResource( 21 )]
+position = Vector2( 553, 12 )
+
+[node name="break-box2" parent="break-box" instance=ExtResource( 21 )]
+position = Vector2( 886, -209 )
+
+[node name="Birdie" parent="." instance=ExtResource( 22 )]
+position = Vector2( 261, 35 )
 
 [connection signal="body_entered" from="fall-zone" to="fall-zone" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="fall-zone2" to="fall-zone2" method="_on_fallzone_body_entered"]
