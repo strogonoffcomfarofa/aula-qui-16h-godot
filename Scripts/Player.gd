@@ -20,10 +20,12 @@ onready var raycasts = $raycasts;
 signal change_life(player_health)
 
 func _ready() -> void:
+	Global.set("player", self)
 	connect("change_life", get_parent().get_node("HUD/VBoxContainer/Holder"), "on_change_life")
 	emit_signal("change_life", max_health)
 	position.x = Global.checkpoint_pos + 50
 func _physics_process(delta: float) -> void:
+
 	velocity.y += gravity * delta;
 	
 	velocity.x = 0
