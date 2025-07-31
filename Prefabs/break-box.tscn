@@ -4,9 +4,9 @@
 [ext_resource path="res://Assets/Items/Boxes/Box2/Hit (28x24).png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Breakable.gd" type="Script" id=3]
 [ext_resource path="res://Items/apple_rig.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Items/orange_rig.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Items/banana_rig.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Items/pineapple_rig.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/banana_rig.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/kiwi_rig.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/orange_rig.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -169,7 +169,7 @@ tracks/3/keys = {
 collision_layer = 16
 collision_mask = 0
 script = ExtResource( 3 )
-fruit_instance = [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ]
+fruit_instance = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 fruits = 10
 
 [node name="texture" type="Sprite" parent="."]

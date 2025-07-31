@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 export (Array, PackedScene) var fruit_instance
 export (int, 0, 20, 1) var fruits = 0
 
@@ -25,11 +26,12 @@ func destroy():
 				var rigid = RigidBody2D.new()
 				rigid.add_child(sprite)
 				get_parent().add_child(rigid)
-				rigid.apply_impulse(Vector2.ZERO, Vector2(rand_range(-50,50), rand_range(-100, -150)))
+				rigid.apply_impulse(Vector2.ZERO, Vector2(rand_range(-50, 50), rand_range(-100, -150)))
 		queue_free()
 	else:
 		create_fruit()
 		$anim.play("hit")
+		
 func create_fruit():
 	var fruit_number = round(rand_range(0, fruit_instance.size() -1))
 	var fruit = fruit_instance[fruit_number].instance()

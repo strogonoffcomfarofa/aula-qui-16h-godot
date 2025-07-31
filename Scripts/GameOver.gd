@@ -1,11 +1,8 @@
 extends CanvasLayer
 
 
-
-
 func _ready():
-	pass 
-
+	pass
 
 
 func _on_BtnRetry_pressed():

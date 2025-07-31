@@ -1,24 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Items/orange.tscn" type="PackedScene" id=1]
-
-[sub_resource type="GDScript" id=4]
-script/source = "extends Area2D
-
-export var fruits = 1
-
-func _on_apple_body_entered(body):
-	$anim.play(\"collected\");
-	Global.fruits += fruits
-	print(Global.fruits)
-
-
-func _on_anim_animation_finished(anim_name):
-	if anim_name == \"collected\":
-		queue_free();
-"
 
 [node name="orange_rig" type="RigidBody2D"]
 
 [node name="orange" parent="." instance=ExtResource( 1 )]
-script = SubResource( 4 )
