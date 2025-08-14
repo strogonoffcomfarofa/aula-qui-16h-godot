@@ -395,6 +395,11 @@ position = Vector2( 8, 4 )
 cast_to = Vector2( 6, 0 )
 collision_mask = 128
 
+[node name="pushLeft" type="RayCast2D" parent="."]
+position = Vector2( -8, 4 )
+cast_to = Vector2( -6, 0 )
+collision_mask = 128
+
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="headCollider" to="." method="_on_headCollider_body_entered"]
