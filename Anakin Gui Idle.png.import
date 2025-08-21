@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chain.png-78a3362994b018e78b08c86e8a27f9ac.stex"
+path="res://.import/Anakin Gui Idle.png-6f420434e13e1175d8554ca7661e9572.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Traps/Saw/Chain.png"
-dest_files=[ "res://.import/Chain.png-78a3362994b018e78b08c86e8a27f9ac.stex" ]
+source_file="res://Anakin Gui Idle.png"
+dest_files=[ "res://.import/Anakin Gui Idle.png-6f420434e13e1175d8554ca7661e9572.stex" ]
 
 [params]
 
