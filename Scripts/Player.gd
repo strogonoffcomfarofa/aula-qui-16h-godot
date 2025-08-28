@@ -50,6 +50,10 @@ func _physics_process(delta: float) -> void:
 	velocity = move_and_slide(velocity, UP);
 	
 	is_grounded = _check_is_ground();
+	if is_grounded:
+		$Shadow.visible = true
+	else:
+		$Shadow.visible = false
 	
 	_set_animation();
 	
@@ -138,6 +142,7 @@ func hit_checkpoint():
 func gameOver() -> void:
 	if Global.player_health < 1:
 		queue_free()
+		Global.is_dead = true
 		get_tree().change_scene("res://Prefabs/GameOver.tscn")
 
 
